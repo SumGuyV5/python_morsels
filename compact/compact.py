@@ -9,5 +9,6 @@ def compact(data):
 
     return iter(val)
 
+
 if __name__ == "__main__":
-    print (compact([ 1, 1, 1]))
+    print(compact([1, 1, 1]))

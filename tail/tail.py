@@ -1,5 +1,6 @@
 import types
 
+
 def tail(elements, n):
     rv = []
     if n > 0:
@@ -23,6 +24,6 @@ if __name__ == "__main__":
 
     squares = (n ** 2 for n in range(10))
 
-    print(tail(squares,3))
+    print(tail(squares, 3))
 
     print(tail((1, 2, 3), 3))

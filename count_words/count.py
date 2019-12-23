@@ -1,12 +1,14 @@
 import string
 import re
 
-chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+         'w', 'x', 'y', 'z']
+
 
 def count_words(sentences):
     rv = {}
-    #sentences = sentences.translate(str.maketrans('', '', string.punctuation)).lower()
-    #sentences = re.sub(r'[\W_]+', '', sentences.lower())
+    # sentences = sentences.translate(str.maketrans('', '', string.punctuation)).lower()
+    # sentences = re.sub(r'[\W_]+', '', sentences.lower())
     sentences = sentences.lower()
     lst = sentences.split(' ')
     for word in lst:

@@ -23,5 +23,6 @@ def meetup_date(year, month, nth=4, weekday=Weekday.THURSDAY):
 
     return datetime.date(year, month, c[nth + mod][weekday])
 
+
 if __name__ == '__main__':
     print(meetup_date(2012, 3))

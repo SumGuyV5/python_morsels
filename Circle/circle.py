@@ -40,10 +40,9 @@ class Circle:
         raise AttributeError("Area cannot be set.")
 
 
-
 if __name__ == '__main__':
     c = Circle(2)
-    #c.diameter = -1
+    # c.diameter = -1
     print(c.radius)
     print(c.diameter)
     print(c.area)

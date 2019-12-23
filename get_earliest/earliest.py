@@ -3,7 +3,7 @@ from datetime import datetime
 
 def date_sort(date):
     m, d, y = date.split('/')
-    return (y, m, d)
+    return y, m, d
 
 
 def get_earliest(*dates):
