@@ -11,7 +11,6 @@ def sum_timestamps(lst):
         if len(x) > 2:
             hours += int(x[-3])
 
-
     m, s = divmod(sec, 60)
     sec = s
     min += m
@@ -22,6 +21,7 @@ def sum_timestamps(lst):
         return f'{min}:{sec:02d}'
     else:
         return f'{hours}:{min:02d}:{sec:02d}'
+
 
 if __name__ == '__main__':
     times = [
