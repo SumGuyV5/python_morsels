@@ -1,7 +1,7 @@
 import csv
 
 
-def csv_columns(file, headers=None, missing=None):
+def old_csv_columns(file, headers=None, missing=None):
     rtn = {}
     if headers:
         for header in headers:
@@ -19,5 +19,17 @@ def csv_columns(file, headers=None, missing=None):
     return rtn
 
 
+def csv_columns(file, headers=None, missing=None):
+    tmp = {}
+    reader = csv.DictReader(file, fieldnames=headers, restval=missing)
+    for row in reader:
+        for header, value in row.items():
+            if header not in tmp:
+                tmp[header] = []
+            tmp[header].append(value)
+
+    return tmp
+
+
 if __name__ == '__main__':
-    print(csv_columns(open('test.csv')))
+    print(csv_columns(open('test.csv'), missing='1'))
