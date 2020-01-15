@@ -72,7 +72,16 @@ class float_range:
             i += self.step
 
     def __reversed__(self):
-        pass
+        stop = self.start
+        start = self.stop - self.step
+        if (self.stop - self.start) % self.step > 0:
+            start = self.stop - self.start
+        i = start
+        while True:
+            if self.step < 0 and i > stop or self.step > 0 and i < stop:
+                break
+            yield i
+            i -= self.step
 
     def __eq__(self, other):
         if isinstance(other, float_range):
@@ -81,10 +90,13 @@ class float_range:
 
 
 if __name__ == '__main__':
-    for n in float_range(0.5, 2.5, 0.5):
-        print(n)
+    #for n in float_range(0.5, 2.5, 0.5):
+    #    print(n)
 
+    r = reversed(float_range(0.5, 7, 0.75))
+    print(list(r))
     print(list(reversed(float_range(0.5, 2.5, 0.5))))
+    print(next(reversed(float_range(1000000))))
    #len(float_range(1, 6, -1))
    #for n in float_range(1, 6, -1):
    #     print(n)
