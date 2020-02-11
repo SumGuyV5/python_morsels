@@ -63,6 +63,6 @@ class Month:
         return f"Month({self.year}, {self.month})"
 
     def __hash__(self):
-        return self.first_day.__hash__()
+        return hash((self.year, self.month))
 
 
