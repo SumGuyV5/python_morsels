@@ -46,7 +46,8 @@ class PermaDict(dict):
 
     def force_set(self, key, value):
         if key in self:
-            del self[self[key]]
+            pass
+            # del self[self[key]]
         if value is self:
             del self[value]
         super().__setitem__(key, value)
