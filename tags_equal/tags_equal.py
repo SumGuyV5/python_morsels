@@ -32,5 +32,5 @@ def tags_equal(tag1, tag2):
 
 if __name__ == '__main__':
     tmp = tags_equal("<img src=cats.jpg height=90 height=40>", "<IMG SRC=Cats.JPG height=90>")
-    if tmp == True:
+    if tmp:
         print('true')
